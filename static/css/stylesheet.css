@@ -42,5 +42,7 @@ h1{
 }
 
 img{
-  padding: 12px; 
+  padding: 12px;
+  max-width: 100%;
+  height: auto;
 }

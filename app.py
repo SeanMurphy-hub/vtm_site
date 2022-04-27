@@ -13,11 +13,15 @@ def index():
 def about():
     return render_template('about.html', pageTitle='About')
 
+
+
 def calculate_top_area(radius):
     return 3.14*(radius**2)
 
 def calculate_side_area(radius,height):
     return 2*(3.14*(height*radius))
+
+
 
 @app.route('/estimate', methods=['GET','POST'])
 def estimate():
@@ -26,7 +30,7 @@ def estimate():
         radius = float(form['radius'])
         height = float(form['height'])
         pi = 3.14
-        topArea = pi * r**2
+        topArea = pi * radius**2
         sidesArea = 2*(pi*(radius*height))
         totalArea = topArea+sidesArea
         totalSqFt = totalArea / 144
