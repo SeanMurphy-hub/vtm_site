@@ -1,19 +1,27 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, redirect, request, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', pageTitle='VTM Site')
+
+
+
+
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', pageTitle='About')
+
+
+
+
 
 @app.route('/estimate')
 def estimate():
-    return render_template('estimate.html')
+    return render_template('estimate.html', pageTitle='Estimator')
 
 if __name__ == '__main__':
     app.run(debug=True)

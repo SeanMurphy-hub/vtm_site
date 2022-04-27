@@ -12,15 +12,16 @@
         <hr>
         <br>
         <div class="topnav">
-            <a class="active" href="/index.html">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/estimate.html">Estimator</a>
+            <a class="active" href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('about')}}">About</a>
+            <a href="{{url_for('estimate')}}">Estimator</a>
         </div>
         
         {% block body %}
 
         {% endblock %}
 
+        <footer id="footer"> VTM 2022 </footer>
     </div>
 </body>
 </html>
