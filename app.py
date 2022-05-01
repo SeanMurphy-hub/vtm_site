@@ -15,10 +15,10 @@ def about():
 
 
 
-def calculate_top_area(radius):
+def calculate_AreaTop(radius):
     return 3.14*(radius**2)
 
-def calculate_side_area(radius,height):
+def calculate_AreaSide(radius,height):
     return 2*(3.14*(height*radius))
 
 
