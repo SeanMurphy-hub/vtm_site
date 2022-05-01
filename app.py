@@ -15,14 +15,6 @@ def about():
 
 
 
-def calculate_AreaTop(radius):
-    return 3.14*(radius**2)
-
-def calculate_AreaSide(radius,height):
-    return 2*(3.14*(height*radius))
-
-
-
 @app.route('/estimate', methods=['GET','POST'])
 def estimate():
     if request.method == 'POST':
@@ -39,6 +31,12 @@ def estimate():
         totalCostEstimate = "${:,.2f}".format(round(materialCost + laborCost, 2))
         return (render_template('estimate.html', estimate = totalCostEstimate))
     return render_template('estimate.html', pageTitle='Estimator')
+
+def calculate_AreaTop(radius):
+    return 3.14*(radius**2)
+
+def calculate_AreaSide(radius,height):
+    return 2*(3.14*(height*radius))
 
 if __name__ == '__main__':
     app.run(debug=True)
